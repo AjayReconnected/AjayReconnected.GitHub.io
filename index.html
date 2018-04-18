@@ -289,6 +289,506 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/Markdown-语法介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ajay_Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajay's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/18/Markdown-语法介绍/" itemprop="url">Markdown 语法介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T22:28:11+08:00">
+                2018-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Markdown 语法介绍</p>
+<p>Markdown 是一种轻量级标记语言，让写作者专注于写作而不用关注样式。Coding 的许多版块均采用了 Markdown 语法，比如冒泡、讨论、Pull Request 等。</p>
+<p>标题</p>
+<p>用 Markdown 书写时，只需要在文本前面加上『# 』即可创建一级标题。同理，创建二级标题、三级标题等只需要增加『# 』个数即可，Markdown 共支持六级标题。如下所示：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>点击预览可以看到效果：</p>
+<p>在这里输入图片描述</p>
+<p>锚点</p>
+<p>Coding 会针对每个标题，在解析时都会添加锚点 id，如</p>
+<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a>锚点</h1><p>会被解析成：</p>
+<p></p><h1 id="user-content-锚点">锚点</h1><br>注意我们添加了一个 user-content- 的前缀，所以如果要自己添加跳转链接要使用 Markdown 的形式，且链接要加一个 user-content- 前缀，如：<p></p>
+<p><a href="#user-content-锚点">访问链接</a>;<br>引用</p>
+<p>Markdown 标记区块引用和 email 中用 『&gt;』的引用方式类似，只需要在整个段落的第一行最前面加上 『&gt;』 ：</p>
+<blockquote>
+<p>Coding.net 为软件开发者提供基于云计算技术的软件开发平台，包括项目管理，代码托管，运行空间和质量控制等等。<br>效果图如下：</p>
+</blockquote>
+<p>在这里输入图片描述</p>
+<p>区块引用可以嵌套，只要根据层次加上不同数量的『&gt;』：</p>
+<blockquote>
+<p>这是第一级引用。</p>
+<blockquote>
+<p>这是第二级引用。</p>
+</blockquote>
+<p>现在回到第一级引用。<br>效果图如下：</p>
+</blockquote>
+<p>在这里输入图片描述</p>
+<p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：</p>
+<blockquote>
+<h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol>
+<li>这是第一行列表项。</li>
+<li>这是第二行列表项。</li>
+</ol>
+<p>给出一些例子代码：</p>
+<p>return shell_exec(<code>echo $input | $markdown_script</code>);<br>效果图如下：</p>
+</blockquote>
+<p>在这里输入图片描述</p>
+<p>列表</p>
+<p>列表项目标记通常放在最左边，项目标记后面要接一个字符的空格。</p>
+<p>无序列表：使用星号、加号或是减号作为列表标记</p>
+<ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue<br>效果图如下：</li>
+</ul>
+<p>在这里输入图片描述</p>
+<p>有序列表：使用数字接着一个英文句点</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue<br>效果图如下：</li>
+</ol>
+<p>在这里输入图片描述</p>
+<p>如果要在列表项目内放进引用，那『&gt;』就需要缩进：</p>
+<ul>
+<li>Coding.net有以下主要功能:<blockquote>
+<p>代码托管平台<br>在线运行环境<br>代码质量监控<br>项目管理平台<br>效果图如下：</p>
+</blockquote>
+</li>
+</ul>
+<p>在这里输入图片描述</p>
+<p>代办列表: 表示列表是否勾选状态（注意：[ ] 前后都要有空格）</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 不勾选</li>
+<li style="list-style: none"><input type="checkbox" checked> 勾选<br>效果图如下：</li>
+</ul>
+<p>图片</p>
+<p>代码</p>
+<p>只要把你的代码块包裹在 “` 之间，你就不需要通过无休止的缩进来标记代码块了。 在围栏式代码块中，你可以指定一个可选的语言标识符，然后我们就可以为它启用语法着色了。 举个例子，这样可以为一段 Ruby 代码着色：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'redcarpet'</span></span><br><span class="line">markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure>
+<p>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>强调</p>
+<p>在Markdown中，可以使用 * 和  _  来表示斜体和加粗。</p>
+<p>斜体：</p>
+<p><em>Coding，让开发更简单</em><br><em>Coding，让开发更简单</em><br>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>加粗：</p>
+<p><strong>Coding，让开发更简单</strong><br><strong>Coding，让开发更简单</strong><br>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>自动链接</p>
+<p>方括号显示说明，圆括号内显示网址， Markdown 会自动把它转成链接，例如：</p>
+<p><a href="http://coding.net" target="_blank" rel="noopener">超强大的云开发平台Coding</a><br>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>表格</p>
+<p>在 Markdown 中，可以制作表格，例如：</p>
+<table>
+<thead>
+<tr>
+<th>First Header</th>
+<th>Second Header</th>
+<th>Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td>Content Cell</td>
+<td>Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>或者也可以让表格两边内容对齐，中间内容居中，例如：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">First Header</th>
+<th style="text-align:center">Second Header</th>
+<th style="text-align:right">Third Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+<tr>
+<td style="text-align:left">Left</td>
+<td style="text-align:center">Center</td>
+<td style="text-align:right">Right</td>
+</tr>
+</tbody>
+</table>
+<p>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>分割线</p>
+<p>在 Markdown 中，可以使用 3 个以上『-』符号制作分割线，例如：</p>
+<h2 id="这是分隔线上部分内容"><a href="#这是分隔线上部分内容" class="headerlink" title="这是分隔线上部分内容"></a>这是分隔线上部分内容</h2><p>这是分隔线上部分内容<br>效果图如下：</p>
+<p>在这里输入图片描述</p>
+<p>图片</p>
+<p>Markdown 使用了类似链接的语法来插入图片, 包含两种形式: 内联 和 引用.</p>
+<p>内联图片语法如下:</p>
+<p><img src="/path/to/img.jpg" alt="Alt text"><br>或<br><img src="/path/to/img.jpg" alt="Alt text" title="Optional title"><br>也就是:</p>
+<p>一个惊叹号『!』<br>接着一个方括号，里面是图片的替代文字<br>接着一个普通括号，里面是图片的网址，最后还可以用引号包住并加上 选择性的『title’』文字。<br>引用图片语法如下:</p>
+<p><img src="url/to/image" alt="Alt text" title="Optional title attribute"><br>『id』 是图片引用的名称. 图片引用使用链接定义的相同语法:</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/信息安全-RSA算法练习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ajay_Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajay's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/18/信息安全-RSA算法练习/" itemprop="url">信息安全:RSA算法练习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T22:17:23+08:00">
+                2018-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/《校务通系统建议书》-软件项目管理实验一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ajay_Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajay's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/16/《校务通系统建议书》-软件项目管理实验一/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T22:28:07+08:00">
+                2018-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: 《校务通系统建议书》–软件项目管理实验一<br>date: 2018-04-16 22:28:07<br>tags:<br>码路—</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/16/信工-1-2-负于-土木/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -690,7 +1190,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
