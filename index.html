@@ -362,7 +362,7 @@
           
             <h2 id="nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，秘钥Sk-e-13"><a href="#nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，秘钥Sk-e-13" class="headerlink" title="&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13"></a>&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13</h2><h3 id="1、求公钥Pk-d"><a href="#1、求公钥Pk-d" class="headerlink" title="　　1、求公钥Pk(d)=?"></a>　　1、求公钥Pk(d)=?</h3><h3 id="2、求加密后的密文C，并简述RSA加密算法的过程。"><a href="#2、求加密后的密文C，并简述RSA加密算法的过程。" class="headerlink" title="　　2、求加密后的密文C，并简述RSA加密算法的过程。"></a>　　2、求加密后的密文C，并简述RSA加密算法的过程。</h3><p>根据公式</p>
 <h3 id="Sk-Pk≡1-MOD-φ（r）"><a href="#Sk-Pk≡1-MOD-φ（r）" class="headerlink" title="　　Sk*Pk≡1 MOD (φ（r）)"></a>　　Sk*Pk≡1 MOD (φ（r）)</h3><p>可以求得Pk    φ（r）=（p-1）*（q-1）=18*22=396；<br>　　只需再使用乘逆算法求出Pk即可，具体计算过程如下：<br>　　重复使用带余数除法，上一轮的除数作为第二轮的被除数，上一轮的余数作为第二轮的除数，辗转相除余数为1为止。这里令a=Sk(e)=13,b=Pk,R=φ（r）</p>
-<h3 id="b-a-1-MOD-R"><a href="#b-a-1-MOD-R" class="headerlink" title="　　b=a^(-1) MOD R"></a>　　b=a^(-1) MOD R</h3><table>
+<h3 id="b-a-1-MOD-R"><a href="#b-a-1-MOD-R" class="headerlink" title="　　b=a^{-1} MOD R"></a>　　b=a^{-1} MOD R</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">轮次i</th>
