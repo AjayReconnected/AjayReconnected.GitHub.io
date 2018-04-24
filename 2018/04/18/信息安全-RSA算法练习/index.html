@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13　　1、求公钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD (φ（r）)可以求得Pk    φ（r）=（p-1）*（q-1）=18*22=396；　　只需再使用乘逆算法求出Pk即可，具体计算过程如">
+<meta name="description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13　　1、求密钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD(φ(n))可以求得Pk 　　n=p*q=19*23=437　　φ(n)=(p-1)*（q-1）=18*22=396；　　只需再使用乘逆算法">
 <meta name="keywords" content="码路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息安全-RSA算法练习">
 <meta property="og:url" content="http://yoursite.com/2018/04/18/信息安全-RSA算法练习/index.html">
 <meta property="og:site_name" content="Ajay&#39;s Blog">
-<meta property="og:description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13　　1、求公钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD (φ（r）)可以求得Pk    φ（r）=（p-1）*（q-1）=18*22=396；　　只需再使用乘逆算法求出Pk即可，具体计算过程如">
+<meta property="og:description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13　　1、求密钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD(φ(n))可以求得Pk 　　n=p*q=19*23=437　　φ(n)=(p-1)*（q-1）=18*22=396；　　只需再使用乘逆算法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-18T15:39:27.978Z">
+<meta property="og:updated_time" content="2018-04-24T01:44:16.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息安全-RSA算法练习">
-<meta name="twitter:description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13　　1、求公钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD (φ（r）)可以求得Pk    φ（r）=（p-1）*（q-1）=18*22=396；　　只需再使用乘逆算法求出Pk即可，具体计算过程如">
+<meta name="twitter:description" content="&amp;nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13　　1、求密钥Pk(d)=?　　2、求加密后的密文C，并简述RSA加密算法的过程。根据公式 　　Sk*Pk≡1 MOD(φ(n))可以求得Pk 　　n=p*q=19*23=437　　φ(n)=(p-1)*（q-1）=18*22=396；　　只需再使用乘逆算法">
 
 
 
@@ -360,9 +360,10 @@
       
 
       
-        <h2 id="nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，秘钥Sk-e-13"><a href="#nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，秘钥Sk-e-13" class="headerlink" title="&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13"></a>&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13</h2><h3 id="1、求公钥Pk-d"><a href="#1、求公钥Pk-d" class="headerlink" title="　　1、求公钥Pk(d)=?"></a>　　1、求公钥Pk(d)=?</h3><h3 id="2、求加密后的密文C，并简述RSA加密算法的过程。"><a href="#2、求加密后的密文C，并简述RSA加密算法的过程。" class="headerlink" title="　　2、求加密后的密文C，并简述RSA加密算法的过程。"></a>　　2、求加密后的密文C，并简述RSA加密算法的过程。</h3><p>根据公式</p>
-<h3 id="Sk-Pk≡1-MOD-φ（r）"><a href="#Sk-Pk≡1-MOD-φ（r）" class="headerlink" title="　　Sk*Pk≡1 MOD (φ（r）)"></a>　　Sk*Pk≡1 MOD (φ（r）)</h3><p>可以求得Pk    φ（r）=（p-1）*（q-1）=18*22=396；<br>　　只需再使用乘逆算法求出Pk即可，具体计算过程如下：<br>　　重复使用带余数除法，上一轮的除数作为第二轮的被除数，上一轮的余数作为第二轮的除数，辗转相除余数为1为止。这里令a=Sk(e)=13,b=Pk,R=φ（r）</p>
-<h3 id="b-a-1-MOD-R"><a href="#b-a-1-MOD-R" class="headerlink" title="　　b=a^{-1} MOD R"></a>　　b=a^{-1} MOD R</h3><table>
+        <h2 id="nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，私Sk-e-13"><a href="#nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，私Sk-e-13" class="headerlink" title="&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13"></a>&nbsp;使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13</h2><h3 id="1、求密钥Pk-d"><a href="#1、求密钥Pk-d" class="headerlink" title="　　1、求密钥Pk(d)=?"></a>　　1、求密钥Pk(d)=?</h3><h3 id="2、求加密后的密文C，并简述RSA加密算法的过程。"><a href="#2、求加密后的密文C，并简述RSA加密算法的过程。" class="headerlink" title="　　2、求加密后的密文C，并简述RSA加密算法的过程。"></a>　　2、求加密后的密文C，并简述RSA加密算法的过程。</h3><p>根据公式</p>
+<h3 id="Sk-Pk≡1-MOD-φ-n"><a href="#Sk-Pk≡1-MOD-φ-n" class="headerlink" title="　　Sk*Pk≡1 MOD(φ(n))"></a>　　Sk*Pk≡1 MOD(φ(n))</h3><p>可以求得Pk</p>
+<h3 id="n-p-q-19-23-437"><a href="#n-p-q-19-23-437" class="headerlink" title="　　n=p*q=19*23=437"></a>　　n=p*q=19*23=437</h3><h3 id="φ-n-p-1-（q-1）-18-22-396；"><a href="#φ-n-p-1-（q-1）-18-22-396；" class="headerlink" title="　　φ(n)=(p-1)*（q-1）=18*22=396；"></a>　　φ(n)=(p-1)*（q-1）=18*22=396；</h3><p>　　只需再使用乘逆算法求出Pk即可，具体计算过程如下：<br>　　重复使用带余数除法，上一轮的除数作为第二轮的被除数，上一轮的余数作为第二轮的除数，辗转相除余数为1为止。这里令a=Sk(d)=13,b=Pk,R=φ（r）</p>
+<h3 id="b-a-1-MOD-R"><a href="#b-a-1-MOD-R" class="headerlink" title="　　b=a^(-1) MOD R"></a>　　b=a^(-1) MOD R</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">轮次i</th>
@@ -378,20 +379,146 @@
 <td style="text-align:center">30</td>
 <td style="text-align:center">6       </td>
 </tr>
+</tbody>
+</table>
+<p>b1=-q1=-30</p>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">b1=-q1=-30</td>
+<th style="text-align:center">轮次i</th>
+<th style="text-align:center">R/a</th>
+<th style="text-align:center">q(i)</th>
+<th style="text-align:center">y(i)    </th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td style="text-align:center">2</td>
 <td style="text-align:center">13/6</td>
 <td style="text-align:center">2</td>
 <td style="text-align:center">1       </td>
 </tr>
+</tbody>
+</table>
+<p>b2=b0-b1<em>q2=1-(-30)</em>2)=61</p>
+<h2 id="至此，求得公钥Pk-e-61"><a href="#至此，求得公钥Pk-e-61" class="headerlink" title="至此，求得公钥Pk(e)=61"></a>至此，求得公钥Pk(e)=61</h2><p>接下来利用求得的公钥对明文进行加密操作：<br>利用加密公式</p>
+<h3 id="c-m-e-MOD-n"><a href="#c-m-e-MOD-n" class="headerlink" title="　　c=m^e(MOD n)"></a>　　c=m^e(MOD n)</h3><p>可以求得密文c</p>
+<h3 id="c-10-61-MOD-437"><a href="#c-10-61-MOD-437" class="headerlink" title="　　c=10^(61)(MOD 437)"></a>　　c=10^(61)(MOD 437)</h3><p>由于指数过大，可采用平方乘算法对其进行分步乘方计算，过程如下：</p>
+<blockquote>
+<ol>
+<li>将指数使用二进制a表示，其长度为L，令c=1，i=L-1=5</li>
+<li>c=c*c mod n<blockquote>
+<ol start="3">
+<li>当bi=1时，c=c*m mod n<br>bi=0时不做计算</li>
+</ol>
+</blockquote>
+</li>
+<li>令i=i-1<br>重复步骤2-4，直到i=0</li>
+</ol>
+</blockquote>
+<p>此时c即为c=c=m^e(MOD n)的值<br>由题可知a=111101,L=6</p>
+<table>
+<thead>
 <tr>
-<td style="text-align:center">b2=b0-b1<em>q2=   1-(-30)</em>2)=61</td>
+<th style="text-align:center">c</th>
+<th style="text-align:center">i</th>
+<th style="text-align:center">bi</th>
+<th style="text-align:center">c*c mod n</th>
+<th style="text-align:center">c*m mod n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">100</td>
+<td style="text-align:center">126</td>
+</tr>
+<tr>
+<td style="text-align:center">126</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">144</td>
+<td style="text-align:center">129</td>
+</tr>
+<tr>
+<td style="text-align:center">129</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">350</td>
+</tr>
+<tr>
+<td style="text-align:center">350</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">140</td>
+<td style="text-align:center">—–</td>
+</tr>
+<tr>
+<td style="text-align:center">140</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">372</td>
+<td style="text-align:center">224</td>
 </tr>
 </tbody>
 </table>
+<p>计算结果为224</p>
+<hr>
+<h2 id="解密算法过程："><a href="#解密算法过程：" class="headerlink" title="解密算法过程："></a>解密算法过程：</h2><p>解密公式</p>
+<h3 id="m-c-d-mod-n"><a href="#m-c-d-mod-n" class="headerlink" title="m=c^d mod n"></a>m=c^d mod n</h3><p>可求得明文m</p>
+<h3 id="m-224-13-MOD-437"><a href="#m-224-13-MOD-437" class="headerlink" title="m=224^(13)(MOD 437)"></a>m=224^(13)(MOD 437)</h3><p>同样利用平方乘算法<br>a=1101,L=4,令m=1,i=L-1=3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">m</th>
+<th style="text-align:center">i</th>
+<th style="text-align:center">bi</th>
+<th style="text-align:center">m*m mod n</th>
+<th style="text-align:center">m*c mod n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">224</td>
+</tr>
+<tr>
+<td style="text-align:center">224</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">358</td>
+<td style="text-align:center">221</td>
+</tr>
+<tr>
+<td style="text-align:center">221</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">334</td>
+<td style="text-align:center">——</td>
+</tr>
+<tr>
+<td style="text-align:center">334</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">121</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<p>通过解密算法得出明文c=10</p>
 
       
     </div>
@@ -431,6 +558,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/20/专业让距离更远/" rel="prev" title="专业让距离更远">
+                专业让距离更远 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +638,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -553,7 +684,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，秘钥Sk-e-13"><span class="nav-number">1.</span> <span class="nav-text"> 使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，秘钥Sk(e)=13</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、求公钥Pk-d"><span class="nav-number">1.1.</span> <span class="nav-text">　　1、求公钥Pk(d)=?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、求加密后的密文C，并简述RSA加密算法的过程。"><span class="nav-number">1.2.</span> <span class="nav-text">　　2、求加密后的密文C，并简述RSA加密算法的过程。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sk-Pk≡1-MOD-φ（r）"><span class="nav-number">1.3.</span> <span class="nav-text">　　Sk*Pk≡1 MOD (φ（r）)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-a-1-MOD-R"><span class="nav-number">1.4.</span> <span class="nav-text">　　b=a^{-1} MOD R</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#nbsp-使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p-19，q-23，私Sk-e-13"><span class="nav-number">1.</span> <span class="nav-text"> 使用RSA公钥加密算法对明文M“10”进行加密，已知选取的用于加密算法的两个“大”素数分别为p=19，q=23，私Sk(e)=13</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、求密钥Pk-d"><span class="nav-number">1.1.</span> <span class="nav-text">　　1、求密钥Pk(d)=?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、求加密后的密文C，并简述RSA加密算法的过程。"><span class="nav-number">1.2.</span> <span class="nav-text">　　2、求加密后的密文C，并简述RSA加密算法的过程。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sk-Pk≡1-MOD-φ-n"><span class="nav-number">1.3.</span> <span class="nav-text">　　Sk*Pk≡1 MOD(φ(n))</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-p-q-19-23-437"><span class="nav-number">1.4.</span> <span class="nav-text">　　n=p*q=19*23=437</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#φ-n-p-1-（q-1）-18-22-396；"><span class="nav-number">1.5.</span> <span class="nav-text">　　φ(n)=(p-1)*（q-1）=18*22=396；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-a-1-MOD-R"><span class="nav-number">1.6.</span> <span class="nav-text">　　b=a^(-1) MOD R</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#至此，求得公钥Pk-e-61"><span class="nav-number">2.</span> <span class="nav-text">至此，求得公钥Pk(e)=61</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#c-m-e-MOD-n"><span class="nav-number">2.1.</span> <span class="nav-text">　　c=m^e(MOD n)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c-10-61-MOD-437"><span class="nav-number">2.2.</span> <span class="nav-text">　　c=10^(61)(MOD 437)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解密算法过程："><span class="nav-number">3.</span> <span class="nav-text">解密算法过程：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#m-c-d-mod-n"><span class="nav-number">3.1.</span> <span class="nav-text">m=c^d mod n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#m-224-13-MOD-437"><span class="nav-number">3.2.</span> <span class="nav-text">m=224^(13)(MOD 437)</span></a></li></ol></li></ol></div>
             
 
           </div>
